@@ -1,23 +1,23 @@
-# SCION
+# mycli
 A light tool to generate projects in an easy way.
 
 # Installation
 ```
-npm install scion-cli -g
+npm install mycli -g
 ```
 or
 ```
-git clone https://github.com/jrainlau/scion.git
+git clone https://github.com/wangqiangstar/mycli.git
 
-cd scion && npm install
+cd mycli && npm install
 
 npm link
 ```
 
 # Usage
-Open your terminal and type `scion` or `scion -h` , you'll see the help infomation below:
+Open your terminal and type `mycli` or `mycli -h` , you'll see the help infomation below:
 ```
-  Usage: scion <command>
+  Usage: mycli <command>
 
 
   Commands:
@@ -37,40 +37,40 @@ Open your terminal and type `scion` or `scion -h` , you'll see the help infomati
 
 # Commands
 ### add | a
-This command would help you to add a new template to the `templates.json`, which will be used by `Scion` to generate projects.
+This command would help you to add a new template to the `templates.json`, which will be used by `mycli` to generate projects.
 ```
 $ scion add
 
 ? Set the custom name of the template: my-first-template
 ? Owner/name of the template: jrainlau/scion
 ? Branch of the template: new
-┌───────────────────┬────────────────┬────────┐
-│ Template Name     │ Owner/Name     │ Branch │
-├───────────────────┼────────────────┼────────┤
-│ my-first-template │ jrainlau/scion │ new    │
-└───────────────────┴────────────────┴────────┘
+┌───────────────────┬────────────────-----┬────────┐
+│ Template Name     │ Owner/Name          │ Branch │
+├───────────────────┼────────────────-----┼────────┤
+│ my-first-template │ wangqiangstar/mycli │ new    │
+└───────────────────┴────────────────-----┴────────┘
 ✔ New template has been added successfully!
 ```
-`Scion` use [download-git-repo](https://github.com/flipxfx/download-git-repo) to down load git repos. After answering 3 questions, you'll add a new template to `Scion`.
+`mycli` use [download-git-repo](https://github.com/flipxfx/download-git-repo) to down load git repos. After answering 3 questions, you'll add a new template to `mycli`.
 
 ### list | l
 It shows you the templates list.
 ```
-$ scion list
+$ mycli list
 
-┌────────────────────┬────────────────┬────────┐
-│ Template Name      │ Owner/Name     │ Branch │
-├────────────────────┼────────────────┼────────┤
-│ my-first-template  │ jrainlau/scion │ new    │
-├────────────────────┼────────────────┼────────┤
-│ my-second-template │ jrainlau/motto │ master │
-└────────────────────┴────────────────┴────────┘
+┌────────────────────┬───────────────-----─┬────────┐
+│ Template Name      │ Owner/Name          │ Branch │
+├────────────────────┼───────────────-----─┼────────┤
+│ my-first-template  │ wangqiangstar/mycli │ new    │
+├────────────────────┼────────────────-----┼────────┤
+│ my-second-template │ wangqiangstar/mycli │ master │
+└────────────────────┴───────────────-----─┴────────┘
 ```
 
 ### init | i
 After adding new templates, you could use this command to generate your own project by choosing template.
 ```
-$ scion init
+$ mycli init
 
 ? Template name: my-first-template
 ? Project name: my-project
@@ -85,22 +85,22 @@ It's easy, right?
 ### delete | d
 To delete a template, you could use this command:
 ```
-$ scion delete
+$ mycli delete
 
 ? Which template you want to delete? my-second-template
-┌───────────────────┬────────────────┬────────┐
-│ Template Name     │ Owner/Name     │ Branch │
-├───────────────────┼────────────────┼────────┤
-│ my-first-template │ jrainlau/scion │ new    │
-└───────────────────┴────────────────┴────────┘
+┌───────────────────┬──────────────-----──┬────────┐
+│ Template Name     │ Owner/Name          │ Branch │
+├───────────────────┼──────────────-----──┼────────┤
+│ my-first-template │ wangqiangstar/mycli │ new    │
+└───────────────────┴───────────────-----─┴────────┘
 ✔ Template has been deleted successfully
 ```
 
 # Template
-The most important part of Scion is `template`. All templates' infomation were list in the `templates.json`.
+The most important part of mycli is `template`. All templates' infomation were list in the `templates.json`.
 A template means a project sample, which has a simple or complex file structure.
 
-You can create your own templates repository, and push your templates in different branches. All you need to do then is to add the templates into Scion's `templates.json`.
+You can create your own templates repository, and push your templates in different branches. All you need to do then is to add the templates into mycli's `templates.json`.
 
 # License
 MIT.
