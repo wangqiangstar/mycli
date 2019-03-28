@@ -3,7 +3,7 @@ A light tool to generate projects in an easy way.
 
 # Installation
 ```
-npm install mycli -g
+npm install commen-mycli -g
 ```
 or
 ```
