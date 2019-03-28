@@ -1,14 +1,24 @@
 {
   "name": "mycli",
   "version": "1.0.0",
-  "description": "我的cli",
+  "description": "A simple CLI for creating your projects",
   "bin": {
     "mycli": "bin/scion.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangqiangstar/mycli.git"
+  },
+  "keywords": [
+    "mycli",
+    "cli",
+    "es6",
+    "脚手架"
+  ],
+  "author": "webqiang",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
+  "homepage": "https://github.com/wangqiangstar/mycli#readme",
+  "dependencies": {
     "chalk": "^1.1.3",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
